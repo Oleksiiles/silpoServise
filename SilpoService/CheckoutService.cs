@@ -1,30 +1,28 @@
-public class CheckoutService
+namespace Silpo.Service
 {
-    private Check check;
-    public void CheckoutService()
-    {
 
-    }
-    public openCheck()
+    public class CheckoutService
     {
-        check = new Check();
-        check.products = new ArrayList<>();
-        check.totalCost = 0;
-
-    }
-    public void addProduct(Product product)
-    {
-        check.products.add(product);
-    }
-
-    public closeCheck()
-    {
-        foreach(var product in check.products)
+        private Check check;
+        public CheckoutService()
         {
-            check.totalCost += product.price;
+
         }
-        return check;
+        public void OpenCheck()
+        {
+            check = new Check();
+
+
+        }
+        public void AddProduct(Product product)
+        {
+            check.AddProduct(product);
+        }
+
+        public Check CloseCheck()
+        {
+            return check;
+        }
+
     }
-
-
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj": {}
+    "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj": {}
   },
   "projects": {
-    "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj": {
+    "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
+        "projectUniqueName": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
         "projectName": "SilpoService.Tests",
-        "projectPath": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
+        "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
         "packagesPath": "/home/intern/.nuget/packages/",
-        "outputPath": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService.Tests/obj/",
+        "outputPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -27,7 +27,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj": {
+                "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -71,6 +75,62 @@
               "privateAssets": "all"
             }
           },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
+        "projectName": "SilpoService",
+        "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
+        "packagesPath": "/home/intern/.nuget/packages/",
+        "outputPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/intern/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }

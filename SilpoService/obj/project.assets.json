@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
+      "projectUniqueName": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
       "projectName": "SilpoService",
-      "projectPath": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
+      "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
       "packagesPath": "/home/intern/.nuget/packages/",
-      "outputPath": "/home/intern/Documents/Silpo/mySilpo/Silpo/SilpoService/obj/",
+      "outputPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

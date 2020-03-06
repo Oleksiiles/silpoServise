@@ -1,7 +1,7 @@
 public class Product
 {
-    int Price;
-    string Name;
+    public int Price;
+    public string Name;
     public Product(int price, string name)
     {
         Price = price;

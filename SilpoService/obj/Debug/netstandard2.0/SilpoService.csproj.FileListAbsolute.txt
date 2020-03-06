@@ -1,0 +1,8 @@
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/Debug/netstandard2.0/SilpoService.csprojAssemblyReference.cache
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/Debug/netstandard2.0/SilpoService.AssemblyInfoInputs.cache
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/Debug/netstandard2.0/SilpoService.AssemblyInfo.cs
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/bin/Debug/netstandard2.0/SilpoService.deps.json
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/bin/Debug/netstandard2.0/SilpoService.dll
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/bin/Debug/netstandard2.0/SilpoService.pdb
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/Debug/netstandard2.0/SilpoService.dll
+/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/Debug/netstandard2.0/SilpoService.pdb
