@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj": {}
+    "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj": {}
   },
   "projects": {
-    "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj": {
+    "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
+        "projectUniqueName": "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj",
         "projectName": "SilpoService",
-        "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj",
-        "packagesPath": "/home/intern/.nuget/packages/",
-        "outputPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/obj/",
+        "projectPath": "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj",
+        "packagesPath": "/Users/alexey/.nuget/packages/",
+        "outputPath": "/Users/alexey/Documents/Interlink/Silpo/SilpoService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/home/intern/.nuget/NuGet/NuGet.Config"
+          "/Users/alexey/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -56,7 +53,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

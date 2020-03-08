@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 public class Check
 {
     private List<Product> products = new List<Product>();
@@ -28,8 +29,5 @@ public class Check
         // }
 
     }
-
-
-
 
 }

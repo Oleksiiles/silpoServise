@@ -6529,23 +6529,19 @@
     ]
   },
   "packageFolders": {
-    "/home/intern/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/alexey/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
+      "projectUniqueName": "/Users/alexey/Documents/Interlink/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
       "projectName": "SilpoService.Tests",
-      "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
-      "packagesPath": "/home/intern/.nuget/packages/",
-      "outputPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService.Tests/obj/",
+      "projectPath": "/Users/alexey/Documents/Interlink/Silpo/SilpoService.Tests/SilpoService.Tests.csproj",
+      "packagesPath": "/Users/alexey/.nuget/packages/",
+      "outputPath": "/Users/alexey/Documents/Interlink/Silpo/SilpoService.Tests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/home/intern/.nuget/NuGet/NuGet.Config"
+        "/Users/alexey/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6556,8 +6552,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj": {
-              "projectPath": "/home/intern/Documents/Task3/Silpo/mySilpo/Silpo/SilpoService/SilpoService.csproj"
+            "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj": {
+              "projectPath": "/Users/alexey/Documents/Interlink/Silpo/SilpoService/SilpoService.csproj"
             }
           }
         }
@@ -6603,7 +6599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }
