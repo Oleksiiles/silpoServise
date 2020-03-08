@@ -3,10 +3,10 @@ using System.Collections.Generic;
 public class Check
 {
     private List<Product> products = new List<Product>();
-    private int totalCost;
+    private int totalCost { get; set; }
     public int GetTotalCost()
     {
-        int totalCost = 0;
+        totalCost = 0;
         foreach (var product in products)
         {
             totalCost += product.Price;
@@ -28,6 +28,11 @@ public class Check
 
         // }
 
+    }
+
+    public int GetTotalPoints()
+    {
+        return GetTotalCost();
     }
 
 }
