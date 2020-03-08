@@ -1,3 +1,4 @@
+
 namespace Silpo.Service
 {
 
@@ -6,10 +7,10 @@ namespace Silpo.Service
         private Check check;
         private bool isCheckClose = false;
 
-        public CheckoutService()
-        {
+        // public CheckoutService()
+        // {
 
-        }
+        // }
         public void OpenCheck()
         {
             check = new Check();
@@ -19,7 +20,7 @@ namespace Silpo.Service
         {
             if (isCheckClose)
             {
-                check = new Check();
+                OpenCheck();
                 isCheckClose = false;
             }
             check.AddProduct(product);
@@ -30,6 +31,15 @@ namespace Silpo.Service
             isCheckClose = true;
             return check;
 
+        }
+
+        public void useOffer(AnyGoodsOffer offer)
+        {
+            if (offer.TotalCost <= check.GetTotalCost())
+            {
+                check.AddPoints(offer.Points);
+
+            }
         }
 
     }
