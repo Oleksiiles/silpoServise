@@ -41,4 +41,17 @@ public class Check
     {
         totalPoints += points;
     }
+
+    public int GetCostByCategory(Category category)
+    {
+        int sum = 0;
+        foreach (var product in products)
+        {
+            if (product.Category == category)
+            {
+                sum += product.Price;
+            }
+        }
+        return sum;
+    }
 }

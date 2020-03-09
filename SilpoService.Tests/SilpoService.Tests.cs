@@ -6,7 +6,7 @@ namespace Silpo.UnitTests.Services
     public class CheckoutServiceTest
     {
         static CheckoutService _checkoutService;
-        Product milk = new Product(7, "Milk");
+        Product milk = new Product(7, "Milk", Category.MILK);
         Product bread = new Product(5, "Bread");
 
 
@@ -83,6 +83,21 @@ namespace Silpo.UnitTests.Services
             Check check = _checkoutService.CloseCheck();
 
             Assert.Equal(5, check.GetTotalPoints());
+        }
+
+
+        [Fact]
+        void UseOffer_factorByCategory()
+        {
+            _checkoutService.AddProduct(milk);
+            _checkoutService.AddProduct(milk);
+            _checkoutService.AddProduct(bread);
+
+
+            _checkoutService.useOffer(new FactorByCaregoryOffer(Category.MILK, 2));
+            Check check = _checkoutService.CloseCheck();
+
+            Assert.Equal(33, check.GetTotalPoints());
         }
     }
 }
