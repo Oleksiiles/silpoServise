@@ -129,6 +129,20 @@ namespace Silpo.UnitTests.Services
 
             Assert.Equal(33, check.GetTotalPoints());
         }
+
+         [Fact]
+        void UseBonusOffer_()
+        {
+            _checkoutService.AddProduct(milk);
+            _checkoutService.AddProduct(bread);
+
+            _checkoutService.useOffer(new DiscountOffer(50, new System.DateTime(2020, 1, 10, 23, 59, 59)));
+
+
+            Check check = _checkoutService.CloseCheck();
+
+            Assert.Equal(6, check.GetTotalCost());
+        }
     }
 
 }

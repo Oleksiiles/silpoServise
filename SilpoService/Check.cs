@@ -5,14 +5,24 @@ public class Check
     private List<Product> products = new List<Product>();
     private int totalPoints { get; set; } = 0;
 
-    public int GetTotalCost()
+    public int GetTotalCost(int discount = 0)
     {
         int totalCost = 0;
         foreach (var product in products)
         {
+
             totalCost += product.Price;
+
         }
-        return totalCost;
+        if (discount != 0)
+        {
+            return totalCost - totalCost * discount / 100;
+        }
+        else
+        {
+            return totalCost;
+
+        }
     }
 
     public void AddProduct(Product product)
