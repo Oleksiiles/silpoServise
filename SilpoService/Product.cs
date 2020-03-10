@@ -3,6 +3,7 @@ public class Product
     public int Price;
     public string Name;
     public Category Category;
+
     public Product(int price, string name)
     {
         Price = price;
@@ -14,4 +15,4 @@ public class Product
         Name = name;
         Category = category;
     }
-}
+} 

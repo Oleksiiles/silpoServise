@@ -1,4 +1,12 @@
+using System;
 public abstract class Offer
 {
-    public abstract void Apply(Check check);
-}
+    public readonly DateTime expirationDate;
+   public abstract void Apply(Check check);
+
+    protected bool isExpiried()
+    {
+        return expirationDate <= DateTime.Today;
+    }
+
+   

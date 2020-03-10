@@ -10,9 +10,10 @@ public class AnyGoodsOffer : Offer
 
     public override void Apply(Check check)
     {
-        // FactorByCaregoryOffer fbOffer = new FactorByCaregoryOffer;
+        if (TotalCost <= check.GetTotalCost())
+        {
+            check.AddPoints(Points);
 
-        // int points = check.GetCostByCategory(fbOffer.Category);
-        // check.AddPoints(points * (fbOffer.Factor - 1));
+        }
     }
 }

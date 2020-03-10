@@ -6,11 +6,16 @@ public class FactorByCaregoryOffer : Offer
     {
         Category = category;
         Factor = factor;
+
     }
 
     public override void Apply(Check check)
     {
-
+        if (true)
+        {
+            int points = check.GetCostByCategory(Category);
+            check.AddPoints(points * (Factor - 1));
+        }
     }
 
 }
