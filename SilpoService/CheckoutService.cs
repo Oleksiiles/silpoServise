@@ -35,25 +35,6 @@ namespace Silpo.Service
         public void useOffer(Offer offer)
         {
             offer.Apply(check);
-
-
-
-
-            // if (offer is FactorByCaregoryOffer)
-            // {
-            //     FactorByCaregoryOffer fbOffer = (FactorByCaregoryOffer)offer;
-            //     int points = check.GetCostByCategory(fbOffer.Category);
-            //     check.AddPoints(points * (fbOffer.Factor - 1));
-            // }
-            // else
-            // {
-            //     if (offer.TotalCost <= check.GetTotalCost())
-            //     {
-            //         check.AddPoints(offer.Points);
-
-            //     }
-            // }
-
         }
 
     }
