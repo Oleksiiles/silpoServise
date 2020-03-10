@@ -8,7 +8,7 @@ public AnyGoodsOffer(int totalCost, int points)
     {
         TotalCost = totalCost;
         Points = points;
-        //  ExpirationDate = 
+        ExpirationDate = new DateTime(2021, 2, 1, 12, 12, 12);
 
     }
 
@@ -22,7 +22,7 @@ public AnyGoodsOffer(int totalCost, int points)
 
     public override void Apply(Check check)
     {
-        if (TotalCost <= check.GetTotalCost())
+        if (TotalCost <= check.GetTotalCost() && !isExpiried())
         {
             check.AddPoints(Points);
 

@@ -9,9 +9,4 @@ public abstract class Offer
         return ExpirationDate <= DateTime.Today;
     }
 
-    // public void TemplateMethod(Check check)
-    // {
-    //     this.Apply(check);
-    //     this.isExpiried();
-    // }
 }

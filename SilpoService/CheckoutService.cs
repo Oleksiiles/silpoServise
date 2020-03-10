@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Silpo.Service
 {
 
@@ -5,6 +6,8 @@ namespace Silpo.Service
     {
         private Check check;
         private bool isCheckClose = false;
+
+        public List<Offer> allOffers = new List<Offer>();
 
         // public CheckoutService()
         // {
@@ -22,11 +25,16 @@ namespace Silpo.Service
                 OpenCheck();
                 isCheckClose = false;
             }
+            
             check.AddProduct(product);
         }
 
         public Check CloseCheck()
         {
+            foreach(var offer in allOffers)
+            {
+            offer.Apply(check);
+            }
             isCheckClose = true;
             return check;
 
@@ -34,7 +42,7 @@ namespace Silpo.Service
 
         public void useOffer(Offer offer)
         {
-            offer.Apply(check);
+            allOffers.Add(offer);
         }
 
     }

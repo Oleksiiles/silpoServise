@@ -109,11 +109,26 @@ namespace Silpo.UnitTests.Services
             _checkoutService.AddProduct(bread);
 
 
-            _checkoutService.useOffer(new FactorByCaregoryOffer(Category.MILK, 2, new System.DateTime(2020, 5, 10, 23, 59, 59)));
+            _checkoutService.useOffer(new FactorByCaregoryOffer(Category.MILK, 2, new System.DateTime(2020, 1, 10, 23, 59, 59)));
+            Check check = _checkoutService.CloseCheck();
+
+            Assert.Equal(19, check.GetTotalPoints());
+        }
+
+        [Fact]
+        void UseOfferUntilClose_()
+        {
+            _checkoutService.AddProduct(milk);
+            _checkoutService.useOffer(new FactorByCaregoryOffer(Category.MILK, 2));
+
+            _checkoutService.AddProduct(milk);
+            _checkoutService.AddProduct(bread);
+
+
             Check check = _checkoutService.CloseCheck();
 
             Assert.Equal(33, check.GetTotalPoints());
         }
     }
-    
+
 }
