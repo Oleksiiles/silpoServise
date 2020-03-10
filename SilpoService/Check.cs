@@ -5,7 +5,9 @@ public class Check
     private List<Product> products = new List<Product>();
     private int totalPoints { get; set; } = 0;
 
-    public int GetTotalCost(int discount = 0)
+    public int Discount = 0; 
+
+    public int GetTotalCost()
     {
         int totalCost = 0;
         foreach (var product in products)
@@ -14,9 +16,9 @@ public class Check
             totalCost += product.Price;
 
         }
-        if (discount != 0)
+        if (Discount != 0)
         {
-            return totalCost - totalCost * discount / 100;
+            return totalCost - totalCost * Discount / 100;
         }
         else
         {

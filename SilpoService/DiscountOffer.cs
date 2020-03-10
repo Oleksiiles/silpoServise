@@ -24,7 +24,7 @@ public class DiscountOffer : Offer
     {
         if (!isExpiried())
         {
-            check.GetTotalCost(Discount);
+            check.Discount = Discount;
 
         }
     }
