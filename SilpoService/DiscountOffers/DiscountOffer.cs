@@ -9,7 +9,6 @@ public class DiscountOffer : Offer
 
         Discount = discount;
         ExpirationDate = expirationDate;
-        ExpirationDate = new DateTime(2021, 2, 1, 12, 12, 12);
 
     }
 

@@ -1,6 +1,7 @@
 using Silpo.Service;
 using Xunit;
 
+
 namespace Silpo.UnitTests.Services {
     public class CheckoutServiceTest {
         static CheckoutService _checkoutService;
@@ -8,6 +9,10 @@ namespace Silpo.UnitTests.Services {
         Product bread = new Product (5, "Bread");
 
         Product Shampoo = new Product (8, "Shampoo", Brend.ProcterAndGamble);
+
+        dynamic expirationDate = new System.DateTime (2021, 1, 10, 23, 59, 59);
+
+
 
         public CheckoutServiceTest () {
             _checkoutService = new CheckoutService ();
@@ -89,7 +94,7 @@ namespace Silpo.UnitTests.Services {
         }
 
         [Fact]
-        void UseOfferWithExpiried_ () {
+        void UseOfferWithExpired_ () {
             _checkoutService.AddProduct (milk);
             _checkoutService.AddProduct (milk);
             _checkoutService.AddProduct (bread);
@@ -114,11 +119,11 @@ namespace Silpo.UnitTests.Services {
         }
 
         [Fact]
-        void UseBonusOffer_ () {
+        void UseBonusOffer_discount50 () {
             _checkoutService.AddProduct (milk);
             _checkoutService.AddProduct (bread);
 
-            _checkoutService.useOffer (new DiscountOffer (50, new System.DateTime (2020, 1, 10, 23, 59, 59)));
+            _checkoutService.useOffer (new DiscountOffer (50, expirationDate));
 
             Check check = _checkoutService.CloseCheck ();
 
@@ -130,13 +135,39 @@ namespace Silpo.UnitTests.Services {
             _checkoutService.AddProduct (milk);
             _checkoutService.AddProduct (bread);
             _checkoutService.AddProduct (Shampoo);
-            // _checkoutService.AddProduct (Shampoo);
+            _checkoutService.AddProduct (Shampoo);
 
-            _checkoutService.useOffer (new TradeMarkOffer (Brend.ProcterAndGamble, 10, new System.DateTime (2021, 1, 10, 23, 59, 59)));
+            _checkoutService.useOffer (new TradeMarkOffer (Brend.ProcterAndGamble, 10, expirationDate));
 
             Check check = _checkoutService.CloseCheck ();
 
-            Assert.Equal (30, check.GetTotalPoints ());
+            Assert.Equal (48, check.GetTotalPoints ());
+        }
+
+        [Fact]
+
+        void UseDiscountOfferByOneProduct_50 () {
+            _checkoutService.AddProduct (milk);
+            _checkoutService.AddProduct (bread);
+            _checkoutService.AddProduct (Shampoo);
+
+            _checkoutService.useOffer (new DiscountForOneProduct (50, Shampoo, new System.DateTime (2021, 1, 10, 23, 59, 59)));
+
+            Check check = _checkoutService.CloseCheck ();
+
+            Assert.Equal (16, check.GetTotalCost ());
+        }
+
+         void UseDiscountOfferByOneProduct_100 () {
+            _checkoutService.AddProduct (milk);
+            _checkoutService.AddProduct (bread);
+            _checkoutService.AddProduct (Shampoo);
+
+            _checkoutService.useOffer (new DiscountForOneProduct (50, Shampoo, new System.DateTime (2021, 1, 10, 23, 59, 59)));
+
+            Check check = _checkoutService.CloseCheck ();
+
+            Assert.Equal (14, check.GetTotalCost());
         }
     }
 
