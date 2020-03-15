@@ -1,10 +1,10 @@
 using System;
 
-public class DiscountOffer : Offer
+public class DiscountOfferMain : Offer
 {
     int Discount { get; set; }
 
-    public DiscountOffer(int discount, DateTime expirationDate)
+    public DiscountOfferMain(int discount, DateTime expirationDate)
     {
 
         Discount = discount;
@@ -12,7 +12,7 @@ public class DiscountOffer : Offer
 
     }
 
-    public DiscountOffer(int discount)
+    public DiscountOfferMain(int discount)
     {
 
         Discount = discount;

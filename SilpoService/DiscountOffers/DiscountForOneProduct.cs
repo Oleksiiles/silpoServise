@@ -23,18 +23,14 @@ public class DiscountForOneProduct : Offer
     }
     public override void Apply(Check check)
     {
-        if (!isExpiried())
+        int PriceDiscountProduct = check.GetPriceDiscountProduct(Product);
+        if (Discount == 50)
         {
-            int PriceDiscountProduct = check.GetPriceDiscountProduct(Product);
-            if (Discount == 50)
-            {
-                check.DiscountForOneProduct = PriceDiscountProduct / 2;
-            }
-             if (Discount == 100)
-            {
-                check.DiscountForOneProduct = PriceDiscountProduct + 1;
-            }
-
+            check.DiscountForOneProduct = PriceDiscountProduct / 2;
+        }
+        if (Discount == 100)
+        {
+            check.DiscountForOneProduct = PriceDiscountProduct + 1;
         }
     }
 }

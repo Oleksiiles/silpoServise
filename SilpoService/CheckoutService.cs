@@ -9,10 +9,6 @@ namespace Silpo.Service
 
         public List<Offer> allOffers = new List<Offer>();
 
-        // public CheckoutService()
-        // {
-
-        // }
         public void OpenCheck()
         {
             check = new Check();
@@ -25,15 +21,15 @@ namespace Silpo.Service
                 OpenCheck();
                 isCheckClose = false;
             }
-            
+
             check.AddProduct(product);
         }
 
         public Check CloseCheck()
         {
-            foreach(var offer in allOffers)
+            foreach (var offer in allOffers)
             {
-            offer.Apply(check);
+                offer.CheckAndApply(check);
             }
             isCheckClose = true;
             return check;
@@ -44,6 +40,7 @@ namespace Silpo.Service
         {
             allOffers.Add(offer);
         }
+
 
     }
 }

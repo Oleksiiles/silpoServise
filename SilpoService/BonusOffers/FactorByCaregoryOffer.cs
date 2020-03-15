@@ -26,11 +26,8 @@ public class FactorByCaregoryOffer : Offer
 
     public override void Apply(Check check)
     {
-        if (!isExpiried())
-        {
-            int points = check.GetCostByCategory(Category);
-            check.AddPoints(points * (Factor - 1));
-        }
+        int points = check.GetCostByCategory(Category);
+        check.AddPoints(points * (Factor - 1));
     }
 
 }
